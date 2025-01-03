@@ -12,16 +12,16 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - bulker = bulker.bulker:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - yacman >=0.8.4
     - pyyaml >=5.1
     - logmuse >=0.2.0
@@ -37,6 +37,7 @@ test:
     - pip
     - mock
     - pytest
+    - python {{ python_min }}
   source_files:
     - tests/
   commands:
