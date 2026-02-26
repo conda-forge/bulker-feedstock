@@ -1,5 +1,5 @@
 {% set name = "bulker" %}
-{% set version = "0.7.3" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/databio/{{ name }}/archive/refs/tags//v{{ version }}.tar.gz
-  sha256: 93bd45c123271be9558a1f2d68624861e180fe7aa1aaf676db3457ba04b34937
+  sha256: 6d87e3c635b045280d072aac68d4ce683f048e39f1577bb1d255e16e16696dc7
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
